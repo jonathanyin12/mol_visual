@@ -1,3 +1,4 @@
 bokeh
 cairosvg
 pillow
+numpy
