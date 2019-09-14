@@ -5,7 +5,7 @@ from PIL import Image
 import cairosvg
 import base64
 from io import BytesIO
-from tqdm import tqdm
+from tqdm import tqdm_notebook
 
 def rgb2rgba(image):
     img = image.convert("RGBA")
@@ -26,7 +26,7 @@ def load_pics(smiles_list):
 
     pic_urls = []
     print('Loading molecule structures...')
-    for smiles in tqdm(smiles_list):
+    for smiles in tqdm_notebook(smiles_list):
         Draw.MolToFile(Chem.MolFromSmiles(smiles), "temp.svg", size=(160, 100))
         cairosvg.svg2png(url='temp.svg', write_to="temp.png", dpi=100)
         image = rgb2rgba(Image.open('temp.png'))
