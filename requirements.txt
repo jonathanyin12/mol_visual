@@ -1,4 +1,3 @@
 bokeh
 cairosvg
-base64
 PIL
