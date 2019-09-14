@@ -2,3 +2,4 @@ bokeh
 cairosvg
 pillow
 numpy
+tqdm
