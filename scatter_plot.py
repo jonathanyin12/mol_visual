@@ -1,6 +1,7 @@
 from bokeh.plotting import figure, output_file, show, ColumnDataSource
 from bokeh.io import output_notebook
 from bokeh.palettes import Category20
+import numpy as np
 
 def plot_mols(x, y, labels, imgs, groups, s=8, alpha = 0.8, x_label='', y_label='', title='', size=(800,600)):  
     TOOLTIPS = """
