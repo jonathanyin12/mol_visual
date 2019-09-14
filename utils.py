@@ -25,7 +25,7 @@ def load_pics(smiles_list):
     DrawingOptions.atomLabelFontSize = 28
 
     pic_urls = []
-    print('Loading molecule structures...')
+    print('Loading molecular structures...')
     for smiles in tqdm_notebook(smiles_list):
         Draw.MolToFile(Chem.MolFromSmiles(smiles), "temp.svg", size=(160, 100))
         cairosvg.svg2png(url='temp.svg', write_to="temp.png", dpi=100)
