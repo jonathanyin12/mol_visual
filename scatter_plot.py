@@ -1,4 +1,4 @@
-from bokeh.plotting import output_file, show, ColumnDataSource
+from bokeh.plotting import figure, output_file, show, ColumnDataSource
 from bokeh.io import output_notebook
 from bokeh.palettes import Category20
 
