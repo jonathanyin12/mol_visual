@@ -21,7 +21,7 @@ def plot_mols(x, y, labels, imgs, groups, s=8, alpha = 0.8, x_label='', y_label=
                x_axis_label=x_label, 
                y_axis_label=y_label)
 
-    colors = Category20[20][len(np.unique(groups))]
+    colors = Category20[20][:len(np.unique(groups))]
     
     points = ColumnDataSource(data=dict(
        x=x,
