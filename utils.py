@@ -29,8 +29,7 @@ def load_pics(smiles_list):
     print('Loading molecular structures...')
     for smiles in tqdm_notebook(smiles_list):
         try:
-            Draw.MolToFile(Chem.MolFromSmiles(smiles), "temp.svg", size=(160, 100))
-            cairosvg.svg2png(url='temp.svg', write_to="temp.png", dpi=100)
+            Draw.MolToFile(Chem.MolFromSmiles(smiles), "temp.png", size=(160, 100))
             image = rgb2rgba(Image.open('temp.png'))
 
             buffered = BytesIO()
