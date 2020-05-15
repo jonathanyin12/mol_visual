@@ -37,7 +37,6 @@ def load_pics(smiles_list):
             url = 'data:image/png;base64,' + base64.b64encode(buffered.getvalue()).decode('utf-8')
             pic_urls.append(url)
 
-            os.remove("temp.svg")
             os.remove("temp.png")
         except:
             pic_urls.append(smiles)
