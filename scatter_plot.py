@@ -20,12 +20,9 @@ def plot_mols(x, y, labels, imgs, groups, s=8, alpha = 0.8, x_label='', y_label=
                title=title,
                x_axis_label=x_label, 
                y_axis_label=y_label)
-    
-    if len(np.unique(groups))<=2:
-        colors= Category20[3]
-    else:
-        colors = Category20[len(np.unique(groups))]
 
+    colors = Category20[20][len(np.unique(groups))]
+    
     points = ColumnDataSource(data=dict(
        x=x,
        y=y,
